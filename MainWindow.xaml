@@ -1,0 +1,57 @@
+﻿<Window x:Class="Cooker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cooker"
+        mc:Ignorable="d"
+        Title="BlinMaker" Height="240" Width="170"
+        ResizeMode="NoResize" KeyDown="Window_KeyDown"
+        >
+    <Grid>
+        <!-- Grid and Column definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+
+
+
+
+        <GroupBox Grid.Row="2" Grid.Column="1" Header="Cooker:" Margin="-5, -13, -5, -190"/>
+
+        <TextBox x:Name="EggsAmount" Grid.Row="2" Grid.Column="1" Text="0" Margin="1, 7, 80, 0" TextChanged="EggsAmount_TextChanged" MaxLength="6" MouseDown="EggsAmount_MouseDown" GotFocus="EggsAmount_GotFocus" />
+        <TextBox x:Name="MilkAmount" Grid.Row="3" Grid.Column="1" Text="0" Margin="1, 7, 80, 0" TextChanged="MilkAmount_TextChanged" MaxLength="6" GotFocus="MilkAmount_GotFocus"/>
+        <TextBox x:Name="FlourAmount" Grid.Row="4" Grid.Column="1" Text="0" Margin="1, 7, 80, 0" TextChanged="FlourAmount_TextChanged" MaxLength="6" GotFocus="FlourAmount_GotFocus"/>
+
+        <TextBlock x:Name="EggsShow" Text="Eggs" Grid.Row="2" Grid.Column="1" FontSize="20" Margin="50, 0, 0, 0" HorizontalAlignment="Right" TextAlignment="Right"/>
+        <TextBlock x:Name="MilkShow" Text="ml   Milk" Grid.Row="3" Grid.Column="1" FontSize="20" Margin="50, 0, 0, 0" HorizontalAlignment="Right" TextAlignment="Right"/>
+        <TextBlock x:Name="FlourShow" Text="g   Flour" Grid.Row="4" Grid.Column="1" FontSize="20" Margin="50, 0, 0, 0" HorizontalAlignment="Right" TextAlignment="Right"/>
+
+        <TextBlock x:Name="AmountCanTXT" Text="Blins:" Grid.Column="1" Grid.Row="5" FontSize="30" Margin="0, 0, 0, 0" />
+        <TextBox x:Name="AmountCanInt" Grid.Row="6" Grid.Column="1" Text="0" FontSize="25" IsReadOnly="True" Margin="5, 5, 5, 5" />
+        <GroupBox Grid.Row="6" Grid.Column="1" Header="" FontSize="10" Margin="-5, -43, -5, -50" Visibility="Hidden"></GroupBox>
+        <TextBlock Text="No blin today :(" Grid.Column="1" Grid.Row="7" x:Name="HowMany" MaxWidth="126" />
+
+        <!-- <Button x:Name="AboutButton" Content="About" Grid.Column="1" Grid.Row="6" Margin="10,48,10,7" FontSize="10" />-->
+
+
+        
+
+
+    </Grid>
+</Window>
